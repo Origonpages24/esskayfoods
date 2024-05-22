@@ -221,7 +221,10 @@
 }
 
   /* navbar styling */
-.navbar-brand{
+.navbar{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+  .navbar-brand{
     width: 80px;
     img{
         width: 100%;
@@ -334,7 +337,10 @@
     color: orangered;
   }
 }
-
+/* index page design */
+.carousel-indicators button{
+  background-color: #1e1e1e;
+}
 /* product page design */
 .products-flex-box{
   display: flex;
@@ -345,6 +351,122 @@
 }
 .products-container{
   padding: 50px 0;
+}
+.banner-caption{
+  position: absolute;
+  display: block;
+  top: 23%;
+  left: 8%;
+  h1{
+    font-size: 50px;
+    line-height: 60px;
+    font-family: "Poppins";
+    font-weight: 600;
+    color: #1e1e1e;
+  }
+  span{
+    color: var(--primary-color);
+  }
+  p{
+    width: 50%;
+    font-size: 17px;
+    font-family: "Poppins";
+    font-weight: 500;
+    opacity: 60%;
+  }
+  .banner-btn{
+    background-color: #20225D;
+    color: white;
+    font-size: 17px;
+    padding: 8px 25px;
+    border-radius: 30px;
+    font-family: "Poppins";
+    margin-top: 25px;
+  }
+  .banner-btn:hover{
+    background-color: transparent;
+    border: 1.5px solid var(--primary-color);
+    color: var(--primary-color);
+    transition: .3s ease;
+  }
+  i{
+    padding-left: 8px;
+  }
+}
+
+/* about section animation */
+
+@keyframes fadeInScale {
+  0% {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.animate-image {
+  animation: fadeInScale 1s ease-in-out forwards;
+}
+
+.animate-text {
+  animation: fadeIn 1s ease-in-out 0.5s forwards; 
+}
+/*end of about section animation */
+
+.aboutus{
+  padding: 100px 0;
+}
+.about-section-header{
+  span{
+    font-size: 17px;
+    font-family: "Poppins";
+    font-style: italic;
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  h6{
+    font-size: 18px;
+    font-family: "Poppins";
+    color: #1e1e1e;
+  }
+  p{
+    font-size: 15px;
+    font-family: "Poppins";
+    font-weight: 500;
+    color: #1e1e1e;
+    opacity: 60%;
+  }
+  .about-us-btn{
+    background-color: var(--primary-color);
+    color: white;
+    font-family: "Poppins";
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 30px;
+    padding: 8px 25px;
+    margin-top: 20px;
+  }
+  .about-us-btn:hover{
+    background-color: transparent;
+    border: 1.5px solid var(--primary-color);
+    color: var(--primary-color);
+    transition: .3s ease;
+  }
+  i{
+    padding-left: 8px;
+  }
 }
 
 /* product nav */
@@ -928,6 +1050,14 @@ p.card-text {
     padding: 9px 0px 30px;
   }
 }
+@media (max-width:1280px) {
+    .banner-caption{
+      h1{
+        font-size: 40px;
+        line-height: 48px;
+      }
+    }
+}
 @media (max-width:1024px) {
   .single-product-heading h1{
     font-size: 27px;
@@ -941,6 +1071,33 @@ p.card-text {
   .single-product-price p{
     font-size: 25px;
   }
+  .banner-caption{
+    left: 5%;
+    h1{
+      font-size: 35px;
+      line-height: 45px;
+    }
+    span{
+      font-size: 35px;
+    }
+  }
+}
+@media (max-width:968px) {
+  .banner-caption{
+    left: 3%;
+    h1{
+      font-size: 28px !important;
+      line-height: 35px !important;
+    }
+    span{
+      font-size: 28px !important;
+    }
+    .banner-btn{
+      margin-top: 8px !important;
+      font-size: 14px !important;
+    }
+  }
+  
 }
 @media (max-width:768px) {
   .single-product-heading h1{
@@ -989,6 +1146,9 @@ p.card-text {
   h6{
     font-size: 17px;
   }
+}
+.banner-caption{
+  top: 12%;
 }
 }
 @media (max-width:480px) {
